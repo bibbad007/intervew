@@ -8,8 +8,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
 
 @Entity
+@NamedQuery(name="find_all_from_account",query="select t from Transaction t where t.fromAccount.id = :pid")
 public class Transaction {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -33,6 +35,14 @@ public class Transaction {
 		this.toAccount = toAccount;
 		this.transDate = transDate;
 		this.amountTrans = amountTrans;
+	}
+    
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public long getId() {
+		return id;
 	}
 
 	public Account getFromAccount() {

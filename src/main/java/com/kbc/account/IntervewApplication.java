@@ -33,14 +33,14 @@ public class IntervewApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
-		Person person=personRepo.findById(10001);
+		/*Person person=personRepo.findById(10001);
 		logger.info("All users {}",personRepo.findById(10001).getHomeAddress().getBuilding());
 		logger.info("All users {}",personRepo.findById(10002).getIdProof().getProofType());
 		person.getHomeAddress().setBuilding("Tesco");
 		personRepo.updateOrInsert(person);
 		Person p=new Person("SANJU", 22, null, null, null, null);
 		personRepo.updateOrInsert(p);		
-		logger.info("All accountRepo {}",accountRepo.findAll());  
+		logger.info("All accountRepo {}",accountRepo.findAll());  */
 	}
 
 }

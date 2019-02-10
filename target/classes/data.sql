@@ -1,15 +1,5 @@
 
 
-create table transactions
-(
-   id integer not null,
-   accountid_from integer, 
-   accountid_to varchar(255),
-   amount integer,
-   trans_date timestamp,
-   primary key (id)
-);
-
 INSERT INTO id_proof (ID, proof_type,expiry_date) 
 VALUES(11001,  'PASSPORT',{ts '2022-09-22 18:10:21.69'});
 INSERT INTO id_proof (ID, proof_type,expiry_date) 
@@ -36,5 +26,5 @@ VALUES(12004,10003,'DEBIT',230);
 INSERT INTO account (ID, PERSON_ID,account_type, balance) 
 VALUES(12005,10003,'CREDIT',110);
 
-
+INSERT INTO TRANSACTION (ID,AMOUNT_TRANS,TRANS_DATE,FROM_ID,TO_ID) VALUES (10001,20,'2008-01-01 00:00:01',12001,12002);
 commit;

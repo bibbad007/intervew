@@ -4,6 +4,7 @@ import java.util.Set;
 
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -45,9 +46,9 @@ public class Person implements Cloneable{
 			@AttributeOverride (name="location",column=@Column(name="office_loc")),
 			@AttributeOverride (name="phone",column=@Column(name="office_phone"))
 	})
-    Address officeAdress;
+    Address officeAddress;
 	
-	@OneToOne
+	@OneToOne(cascade={CascadeType.ALL})
 	@JoinColumn(name="proof_id",unique=true)
 	IdProof idProof;
 	
@@ -64,7 +65,7 @@ public class Person implements Cloneable{
 		this.name = name;
 		this.age = age;
 		this.homeAddress = string;
-		this.officeAdress = string2;
+		this.officeAddress = string2;
 		this.idProof = i;
 		this.accounts = accounts;
 	}
@@ -99,12 +100,12 @@ public class Person implements Cloneable{
 		this.homeAddress = homeAddress;
 	}
 
-	public Address getOfficeAdress() {
-		return officeAdress;
+	public Address getOfficeAddress() {
+		return officeAddress;
 	}
 
-	public void setOfficeAdress(Address officeAdress) {
-		this.officeAdress = officeAdress;
+	public void setOfficeAddress(Address officeAdress) {
+		this.officeAddress = officeAdress;
 	}
 
 	public IdProof getIdProof() {

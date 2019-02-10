@@ -26,8 +26,7 @@ public class Account {
 	@OneToMany(mappedBy = "toAccount")
 	Set<Transaction> transactionTo;
 
-	public Account() {
-		super();
+	public Account() {		
 	}
 
 	public Account(String accountType, float balance, Person person, Set<Transaction> transactionFrom,
@@ -40,36 +39,12 @@ public class Account {
 		this.transactionTo = transactionTo;
 	}
 
-	public Set<Transaction> getTransactionFrom() {
-		return transactionFrom;
-	}
-
-	public void setTransactionFrom(Set<Transaction> transactionFrom) {
-		this.transactionFrom = transactionFrom;
-	}
-
-	public Set<Transaction> getTransactionTo() {
-		return transactionTo;
-	}
-
-	public void setTransactionTo(Set<Transaction> transactionTo) {
-		this.transactionTo = transactionTo;
-	}
-
 	public long getId() {
 		return id;
 	}
 
 	public void setId(long id) {
 		this.id = id;
-	}
-
-	public Person getPerson() {
-		return person;
-	}
-
-	public void setPerson(Person person) {
-		this.person = person;
 	}
 
 	public String getAccountType() {
@@ -88,4 +63,28 @@ public class Account {
 		this.balance = balance;
 	}
 
+	public Person getPerson() {
+		return person;
+	}
+
+	public void setPerson(Person person) {
+		this.person = person;
+	}
+
+	public Set<Transaction> getTransactionFrom() {
+		return transactionFrom;
+	}
+
+	public void setTransactionFrom(Set<Transaction> transactionFrom) {
+		this.transactionFrom = transactionFrom;
+	}
+
+	public Set<Transaction> getTransactionTo() {
+		return transactionTo;
+	}
+
+	public void setTransactionTo(Set<Transaction> transactionTo) {
+		this.transactionTo = transactionTo;
+	}
+  
 }

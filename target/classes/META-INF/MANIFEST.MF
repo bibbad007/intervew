@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: intervew
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: user
+Implementation-Vendor-Id: com.kbc.account
+Build-Jdk: 1.8.0_121
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/intervew
+Created-By: Maven Integration for Eclipse
+

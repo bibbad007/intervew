@@ -1,0 +1,47 @@
+drop table id_proof;
+drop table account;
+
+create table person
+(
+   id integer not null,
+   name varchar(255) not null,
+   age integer(2) not null,
+   house_no varchar(255),
+   house_loc varchar(255),
+   house_phone integer,
+   office_no varchar(255),
+   office_loc varchar(255),
+   office_phone integer,
+   primary key (id)
+);
+
+create table id_proof
+(
+    id integer not null,  
+    proof_type varchar(255),
+    person_id integer, 
+    primary key (id)
+);
+
+create table id_proof
+(
+    id integer not null,  
+    proof_type varchar(255),
+    expiry_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    primary key (id)
+);
+
+create table account
+(
+   id integer not null, 
+   account_type varchar(255),
+   balance integer,
+   PERSON_ID integer,
+   primary key (id)
+);
+INSERT INTO id_proof (ID, proof_type, person_id) 
+VALUES(11001,  'PASSPORT',10001);
+INSERT INTO id_proof (ID, proof_type, person_id) 
+VALUES(11002,  'DRIVING',10002);
+INSERT INTO id_proof (ID, proof_type, person_id) 
+VALUES(11003,  'DRIVING',10003);
